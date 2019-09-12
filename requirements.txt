@@ -1,0 +1,6 @@
+carveme==1.2.2
+framed==0.5.2
+smetana==1.0.0
+future
+cplex
+jupyter
