@@ -10,9 +10,20 @@ variables:
 steps:
 - checkout: self
   lfs: true
-- task: Docker@2
+- task: Docker@1
   displayName: Build an image
   inputs:
     repository: davidnohejl/metabolic-models
     command: build
     Dockerfile: dockerfile
+- task: Docker@1
+  displayName: Login
+  inputs:
+     containerregistrytype: 'container Registry'
+     dockerRegistryEndpoint: davidnohejl/metabolic-models
+     command: login
+- task: Docker@1
+  displayName: 'Push an image'
+  inputs:
+     command: push an image
+     imageName: 'davidnohejl/metabolic-models:$(Build.BuildId)'
