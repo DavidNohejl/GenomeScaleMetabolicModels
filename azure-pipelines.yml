@@ -15,4 +15,5 @@ steps:
   inputs:
     repository: $(imageName)
     command: build
+    repository: davidnohejl/metabolic-models
     Dockerfile: dockerfile
