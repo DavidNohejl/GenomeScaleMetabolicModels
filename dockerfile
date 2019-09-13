@@ -28,6 +28,7 @@ RUN cd /opt/ibm/ILOG/CPLEX_Studio128/cplex/python/3.6/x86-64_linux/ && python ./
 #RUN tar xzf diamond-linux64.tar.gz
 
 COPY diamond /usr/bin/
+RUN chmod +x /usr/bin/diamond
 
 RUN rm diamond
 RUN rm cplex_studio128.linux-x86-64.bin
