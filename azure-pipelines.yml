@@ -13,17 +13,15 @@ steps:
 - task: Docker@1
   displayName: Build an image
   inputs:
-    repository: davidnohejl/metabolic-models
-    command: build
+    command: Build an image
     Dockerfile: dockerfile
 - task: Docker@1
   displayName: Login
-  inputs:
-     containerregistrytype: 'container Registry'
-     dockerRegistryEndpoint: davidnohejl/metabolic-models
+  inputs:    
      command: login
+     containerRegistry: davidnohejldockerhub
 - task: Docker@1
   displayName: 'Push an image'
   inputs:
      command: push an image
-     imageName: 'davidnohejl/metabolic-models:$(Build.BuildId)'
+     imageName: 'metabolic-models:$(Build.BuildId)'
