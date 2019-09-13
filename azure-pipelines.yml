@@ -8,6 +8,8 @@ variables:
   imageName: 'pipelines-javascript-docker'
 
 steps:
+- checkout: self
+  lfs: true
 - task: Docker@2
   displayName: Build an image
   inputs:
