@@ -21,4 +21,5 @@ steps:
   displayName: 'Push an image'
   inputs:
      command: buildAndPush
+     dockerfile: dockerfile
      repository: davidnohejl/metabolic-models
