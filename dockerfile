@@ -28,4 +28,4 @@ RUN carveme_init
 
 EXPOSE 8888
 
-ENTRYPOINT ["jupyter", "notebook","--ip=0.0.0.0","--allow-root"]
+ENTRYPOINT ["jupyter", "notebook","--ip=0.0.0.0","--allow-root","--NotebookApp.token='davedemo']
